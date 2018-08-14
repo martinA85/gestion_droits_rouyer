@@ -18,5 +18,13 @@
             <field name="domain_force">['|',('brand_id','=',False),('brand_id.id', 'in', user.marque_ids.ids)]</field>
         </record>
 
+        <!-- Règle qui autorise l'utilisateur à voir les modèles des marques auxquelles il a accés -->
+        <record id="access_marques_rules_modele" model="ir.rule">
+            <field name="name">Règle sur les modèle de voiture</field>
+            <field name="model_id" ref="brand_model_management.model_brand_model_modele" />
+            <field name="global" eval="True" />
+            <field name="domain_force">[('brand_id.id', 'in', user.marque_ids.ids)]</field>
+        </record>
+
     </data>
 </odoo>
