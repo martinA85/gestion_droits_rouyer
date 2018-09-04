@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','rouyer_gestion_vehicule'],
+    'depends': ['base','brand_model_management'],
 
     # always loaded
     'data': [
