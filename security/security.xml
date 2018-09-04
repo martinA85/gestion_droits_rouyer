@@ -24,7 +24,7 @@
         <!-- Règle qui autorise l'utilisateur à ne voir que les marques auxquelles il a le droit -->
         <record id="access_marques_rules" model="ir.rule">
             <field name="name">Règle sur les marques</field>
-            <field name="model_id" ref="brand_model_management.model_brand_model_marque" />
+            <field name="model_id" ref="rouyer_gestion_vehicule.model_rouyer_gv_marque" />
             <field name="global" eval="True" />
             <field name="domain_force">[('id', 'in', user.marque_ids.ids)]</field>
         </record>
@@ -40,7 +40,7 @@
         <!-- Règle qui autorise l'utilisateur à voir les modèles des marques auxquelles il a accés -->
         <record id="access_marques_rules_modele" model="ir.rule">
             <field name="name">Règle sur les modèle de voiture</field>
-            <field name="model_id" ref="brand_model_management.model_brand_model_modele" />
+            <field name="model_id" ref="rouyer_gestion_vehicule.model_rouyer_gv_modele" />
             <field name="global" eval="True" />
             <field name="domain_force">[('brand_id.id', 'in', user.marque_ids.ids)]</field>
         </record>
